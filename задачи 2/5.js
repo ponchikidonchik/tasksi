@@ -17,4 +17,43 @@
 // getResult([4, 4, 4]) => true
 // getResult([4, 5, 8, 22]) => false
 
-let array1 = [2, 1, 1]
+function lol(a) {
+    let sum = 0
+    for (let i = 0; i < a.length; i++) {
+        if (a.length % 2 == 1) {
+            if (a[i] == a[i + 1]) {
+                sum += 1
+            } else if (a[i] == a[a.length - 1]) {
+                sum += 1
+            }
+
+            if (sum == a.length % 2) {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+
+    for (let j = 0; j < a.length; j++) {
+        if (a.length % 2 == 0) {
+            if (a[j] == a[j + 1]) {
+                sum += 1
+            } else if (a[j] == a[a.length - 1]) {
+                sum += 1
+            }
+
+            if (sum == a.length / 2) {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+}
+
+console.log(lol([1, 2, 1]))
+console.log(lol([1, 3]))
+console.log(lol([2, 15, 15, 32, 2]))
+console.log(lol([4, 4, 4]))
+console.log(lol([4, 5, 8, 22]))

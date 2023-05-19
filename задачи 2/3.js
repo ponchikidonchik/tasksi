@@ -15,14 +15,15 @@
 // getResult([-4, 27, -5]) => 18
 // getResult([-3, -8, -17]) => -28
 
-function getResult(a) {
-sum = 0;
-for (let i = 0; i < a.length; i++) {
-    sum += a[i]; 
-}
-return sum;
+function getResult(array) {
+    sum = 0 
+    for (let index = 0; index < array.length; index++) {
+        sum += array[index];
+        
+    }
+return sum
 }
 
-console.log (getResult([1, 3, 5]))
-console.log(getResult([-4, 27, -5]))
-console.log(getResult([-3, -8, -17]))
+console.log(getResult([3 , 7 , 9, -4, 2]))
+console.log(getResult([5 , 9 , 1, -4, -5]))
+console.log(getResult([2 , 6 , 8, -3, 0]))
